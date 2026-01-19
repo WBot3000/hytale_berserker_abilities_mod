@@ -1,0 +1,18 @@
+{
+  "Group": "me.wbot3000",
+  "Name": "Berserker Abilities",
+  "Version": "1.0.0",
+  "Description": "Allows characters to obtain traits and abilities based on the berserker archetype.",
+  "Authors": [
+    {
+      "Name": "WBot3000"
+    }
+  ],
+  "Website": "",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "DisabledByDefault": false,
+  "Main": "me.wbot3000.Main",
+  "IncludesAssetPack": true
+}
