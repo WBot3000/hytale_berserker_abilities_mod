@@ -11,11 +11,12 @@ import com.hypixel.hytale.server.core.modules.entitystats.EntityStatMap;
 import com.hypixel.hytale.server.core.modules.entitystats.asset.DefaultEntityStatTypes;
 import com.hypixel.hytale.server.core.modules.entitystats.modifier.Modifier;
 import com.hypixel.hytale.server.core.modules.entitystats.modifier.StaticModifier;
+import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import me.wbot3000.ABILITY_FLAGS;
 import me.wbot3000.components.AbilityGranter;
 import me.wbot3000.components.BerserkerAbilities;
-import me.wbot3000.modifiers.BulkyIModifier;
+import me.wbot3000.components.Rage;
 import org.checkerframework.checker.nullness.compatqual.NonNullDecl;
 import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
@@ -96,10 +97,12 @@ public class AbilityGrantingSystem extends RefChangeSystem<EntityStore, AbilityG
 
     public void changeRageAbility(@Nonnull boolean giveAbility, @Nonnull Ref<EntityStore> ref, @Nonnull Store<EntityStore> store, @Nonnull CommandBuffer<EntityStore> commandBuffer) {
         if (giveAbility) { //Flag is present, apply ability
-            //TODO: Whatever needed here
+            //The component that enables Rage
+            //NOTE: When adding or removing components, use commandBuffer. store works for getting components.
+            commandBuffer.addComponent(ref, Rage.getComponentType());
         }
         else { //Flag is NOT present, remove ability
-            //TODO: Whatever needed here
+            commandBuffer.removeComponent(ref, Rage.getComponentType());
         }
     }
 
