@@ -20,6 +20,7 @@ import javax.annotation.Nullable;
 
 //NOTE: The index referenced here is the thing GETTING DAMAGED, not the thing DOING damage
 //To get the damager, you need to use damage.getSource()
+//Increases the damage of heavy weapons (Battleaxes and Maces) depending on the rank of the ability
 public class HeavyWeaponsBuffSystem extends DamageEventSystem {
 
     Query<EntityStore> query;
@@ -49,7 +50,7 @@ public class HeavyWeaponsBuffSystem extends DamageEventSystem {
 
         Ref<EntityStore> damager_ref = entity_source.getRef();
         Player _player = store.getComponent(damager_ref, Player.getComponentType());
-        if (_player == null) { //Not a player, don't apply this
+        if (_player == null) { //Damage not done by a player, don't apply this
             return;
         }
 

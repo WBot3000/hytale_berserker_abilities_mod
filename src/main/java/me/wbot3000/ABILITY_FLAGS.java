@@ -3,7 +3,8 @@ package me.wbot3000;
 public enum ABILITY_FLAGS {
     RAGE(1, "rage", "Rage"),
     BULKY_I(1 << 1, "bulkyi", "Bulky I"),
-    HEAVY_WEAPONS_GUY_I(1 << 2, "hwgi", "Heavy Weapons Guy I");
+    HEAVY_WEAPONS_GUY_I(1 << 2, "hwgi", "Heavy Weapons Guy I"),
+    BLOODBATH_I(1 << 3, "bloodbathi", "Bloodbath I");
 
     final private long long_flag;
     final private String ability_shorthand;

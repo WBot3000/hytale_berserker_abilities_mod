@@ -22,6 +22,7 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 import javax.annotation.Nullable;
 
+//Systems for controlling the Rage state
 public class RageSystems {
 
     public static class RageOnTickSystem extends EntityTickingSystem<EntityStore> {

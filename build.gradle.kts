@@ -23,4 +23,7 @@ tasks.test {
 
 tasks.jar {
     destinationDirectory.set(file("D:\\Hypixel Studios\\Hytale\\UserData\\Mods"))
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    //from("src/main/resources")
 }

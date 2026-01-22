@@ -22,6 +22,7 @@ import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 
 import javax.annotation.Nonnull;
 
+//Handles the granting of Berserker abilities to players. Alters the ability bitfield and does any additional setup needed when the ability is granted.
 public class AbilityGrantingSystem extends RefChangeSystem<EntityStore, AbilityGranter> {
 
     private final ComponentType<EntityStore, AbilityGranter> abilityGranterComponentType = AbilityGranter.getComponentType();

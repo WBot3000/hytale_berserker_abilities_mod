@@ -14,6 +14,7 @@ import me.wbot3000.components.BerserkerAbilities;
 import me.wbot3000.components.Rage;
 import me.wbot3000.listeners.InputListener;
 import me.wbot3000.systems.AbilityGrantingSystem;
+import me.wbot3000.systems.BloodbathSystem;
 import me.wbot3000.systems.HeavyWeaponsBuffSystem;
 import me.wbot3000.systems.RageSystems;
 
@@ -68,6 +69,7 @@ public class Main extends JavaPlugin {
         //Register Systems
         entityStoreRegistry.registerSystem(new AbilityGrantingSystem());
         entityStoreRegistry.registerSystem(new HeavyWeaponsBuffSystem());
+        entityStoreRegistry.registerSystem(new BloodbathSystem());
         //Systems for managing Rage state
         entityStoreRegistry.registerSystem(new RageSystems.RageOnTickSystem());
         entityStoreRegistry.registerSystem(new RageSystems.RageDamageBoostSystem());
